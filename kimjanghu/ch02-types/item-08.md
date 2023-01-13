@@ -25,5 +25,33 @@ type T1 = typeof p; // 타입 p의 타입 > Person
 const v1 = typeof p; // 변수 p의 타입 > Object
 ```
 
-## 보완 예정
+* this
+    * 값: 자바스크립트 this
+    * 타입: 다형성 this > 서브클래스 메서드 체인 구현
+* `&, |`
+    * 값: AND, OR 연산자
+    * 타입: intersection, union
+* const
+    * 값: 변수 선언
+    * `as const` 리터럴 또는 리터럴 표현식의 추론된 타입 변경
+        * readonly type으로 바꿈
+        * Object.freeze의 느낌 (개념은 다르다.)
+    ```ts
+    const tmp = {
+        hi: 'hi',
+        bye: 'bye'
+    } as const
 
+    tmp.bye = 'thithi'; // 불가능 > Cannot assign to 'bye' because it is a read-only property
+    ```
+* extends
+    * 서브클래스 `class A extends B`
+    * 서브타입 `interface A extends B`
+    * 제너릭 타입의 한정자 `<T extends number>`
+* in
+    * `for (key in object)`
+    * mapping된 타입에 등장
+        * The in operator returns true if the specified property is in the specified object.
+    ```ts
+    propNameOrNumber in objectName
+    ```
