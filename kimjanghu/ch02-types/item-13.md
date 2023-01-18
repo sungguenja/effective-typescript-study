@@ -157,8 +157,23 @@ const info: IState = {
     hobby: 'sleep'
 }
 ```
+* declaration merging은 주로 타입 선언 파일에서 사용된다.
+* 타입 선언 파일을 작성할 때는 declaration merging을 지원하기 위해 interface로 타입 선언
 
+* Declaration Merging Example
+    * Array type은 interface로 `lib.es5.d.ts` 에 정의 되어 있다.
+    * `tsconfig.json` lib 목록에 `ES2015` 를 추가하면 타입스크립트는 `lib.es2015.d.ts` 에 선언된 인터페이스를 merge 한다.
+    * 이러한 과정을 통해 각 interface declaration이 병합되어 Array는 es5, es2015 등에 적용된 모든 메서드를 가질 수 있다.
+
+* 타입은 병합이 불가능하기 때문에 기존 타입에 추가 보강이 없는 경우에만 사용
 
 ## 13-3. 결론
+* 복잡한 타입이다. > `type`
+* API 변경 등 Declaration Merging 가능성이 있다. > `interface`
+    * 하지만 프로젝트 내부에서만 사용하는 타입에 Declaretion Merging이 발생하는 것은 잘못된 설계
+* 타입과 인터페이스 둘 다 표현 가능한 간단한 타입 > 일관성과 Merging의 관점
 
 ## Summary
+* 인터페이스와 타입의 공통점, 차이점을 이해하자
+* 한 타입을 type, interface 두 가지 문법을 사용해서 작성해보자
+* 일관된 스타일을 유지하며, Declaration Merging 가능성을 고려하자
