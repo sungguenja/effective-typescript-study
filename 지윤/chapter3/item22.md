@@ -48,16 +48,6 @@ const getStringArray = (value: string | string[]) => {
 }
 
 // 타입 좁히기5 - 명시적 태그 사용하기
-type UpdateForm = {
-  type: 'update';
-  formValue: FormValues;
-}
-
-type CreateForm = {
-  type: 'create';
-  formValue: FormValues;
-}
-
 interface FormValues {}
 type UpdateForm = {
   type: 'update';
