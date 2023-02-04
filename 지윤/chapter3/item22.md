@@ -3,7 +3,7 @@
 타입스크립트는 조건문과 같은 분기처리를 통해서, 넓은 타입을 조건을 만족시키는 특정 타입으로 타입을 좁혀준다.
 ```typescript
 // 타입 좁히기1 - 값의 존재 유무
-const isDate = (date: Date | null | undefined) => {
+const isDate = (date?: Date | null) => {
 	if (date != null) {
     console.log(date) // date: Date
 	} else {
@@ -13,7 +13,7 @@ const isDate = (date: Date | null | undefined) => {
 }
 
 // 타입 좁히기2 - instanceof 
-const isDate = (date: Date | null | undefined) => {
+const isDate = (date?: Date | null) => {
   if (date instanceof Date) {
     console.log(date) // Date
   } else {
