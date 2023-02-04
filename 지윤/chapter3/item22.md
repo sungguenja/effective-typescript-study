@@ -117,8 +117,6 @@ const hasString = (value?: string) => {
 };
 ```
 
-
-
 궁금증
 * 예시 쓰다가 갑자기 궁금해진 `thorw Error`와 `throw new Error`의 차이 
   * throw new Error와 throw Error는 예외를 발생시키는 동작을 하는데에 차이는 없다. 
