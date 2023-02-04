@@ -1,7 +1,6 @@
 #### 아이템22. 타입 좁히기
 
 타입스크립트는 조건문과 같은 분기처리를 통해서, 넓은 타입을 조건을 만족시키는 특정 타입으로 타입을 좁혀준다.
-
 ```typescript
 // 타입 좁히기1 - 값의 존재 유무
 const isDate = (date: Date | null | undefined) => {
@@ -22,7 +21,6 @@ const isDate = (date: Date | null | undefined) => {
     throw Error('값 없다')
   }
 };
-
 
 // 타입 좁히기3 - 속성체크
 interface Dog {
@@ -99,7 +97,6 @@ const getUsersWithId = (users: User[], selectedIds: number[]) => {
 
 
 조건문으로 타입 좁히기 시 주의해야할 점 - 조건문의 조건을 잘 쓰자
-
 ```typescript
 // 잘못된 typeof 값 사용 - null의 type은 object이다.
 const isDate = (date: Date | null) => {
@@ -123,7 +120,6 @@ const hasString = (value?: string) => {
 
 
 궁금증
-
 * 예시 쓰다가 갑자기 궁금해진 `thorw Error`와 `throw new Error`의 차이 
   * throw new Error와 throw Error는 예외를 발생시키는 동작을 하는데에 차이는 없다. 
   * throw new Error는 새로운 Error 객체를 생성해 던진다 - Error 객체에서 제공하는 정보를 사용할 수 있다.
