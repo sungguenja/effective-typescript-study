@@ -84,8 +84,6 @@ const getUsersWithId = (users: User[], selectedIds: number[]) => {
 };
 ```
 
-
-
 조건문으로 타입 좁히기 시 주의해야할 점 - 조건문의 조건을 잘 쓰자
 ```typescript
 // 잘못된 typeof 값 사용 - null의 type은 object이다.

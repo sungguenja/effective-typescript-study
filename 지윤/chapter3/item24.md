@@ -10,7 +10,7 @@ interface Product {
   discount?: {
     startDate: Date;
     endDate: Date;
-    discountPersent: number;
+    discountPercent: number;
   };
 }
 
