@@ -53,4 +53,3 @@ const addNumber = (a, b) => a+b // a와 b는 any로 나타난다.
 // 해결 방법 - 타입 구문 추가
 const addNumber = (a: number, b: number) => a+b 
 ```
-
