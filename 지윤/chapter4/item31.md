@@ -1,9 +1,30 @@
 #### 31. 타입 주변에 null 값 배치하기
 
+타입 내부에 nullalble 한 값을 심는 것보다, `타입`이거나 nullable 하거나 하게 작성하는 게 좋다.
+```typescript
+// bad
+interface DateRange {
+  start: Date | null;
+  end: Date | null;
+}
+const date: DateRange = {
+  start: null,
+  end: null,
+}
+
+// good
+interface DateRange {
+  start: Date;
+  end: Date
+}
+const date: DateRange | null = null;
+```
+
+null 값을 쓰는 bad/better case
 ```typescript
 // bad - null 여부가 파생되는 변수만들기
 let a: number | null
-const b = a * 2 
+const b = a * 2  // const b: number | null
 
 // bad - 일부 값만 nullable 체크하기
 const getMinMax = (nums: number[]) => {
