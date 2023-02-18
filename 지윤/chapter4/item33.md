@@ -20,13 +20,10 @@ interface Person {
   address: string;
 }
 ```
-
 string이 아닌 PersonType과 같은 좁은 타입을 사용했을 경우의 장점
 * 값의 사용처에서 명시된 타입의 정보를 받아볼 수 있다.
 * 주석을 달아 타입을 설명할 수 있다.
 * 객체 속성 체크를 할 땐 keyof 연산자로 할 수 있다.
-
-
 
 스트링은 범위가 넓어 any스럽다. 구체적으로 좁힐 수 있다면 더 좁은 타입을 사용하자.
 ```typescript

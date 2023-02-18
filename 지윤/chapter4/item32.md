@@ -4,7 +4,7 @@
 ```typescript
 // bad
 interface Field {
-	fieldType: 'text' | 'checkbox' | 'select';
+  fieldType: 'text' | 'checkbox' | 'select';
   fieldValue: TextFieldValue | CheckboxFieldValue | SelectFieldValue;
 }
 
