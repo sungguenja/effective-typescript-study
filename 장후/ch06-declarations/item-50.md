@@ -32,7 +32,6 @@ function f(x: number | string) {
 }
 ```
 
-* T가 string 부분 집한이면, 반환 타입이 string이고 그 외의 경우엔 number로 반환된다.
+* T가 string 부분 집합이면, 반환 타입이 string이고 그 외의 경우엔 number로 반환된다.
 
 타입 오버로딩은 독립적으로 처리되지만, 조건부 타입은 단일 표현식으로 받아들여 유니온 문제를 해결 할 수 있다.
-
