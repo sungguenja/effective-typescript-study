@@ -15,10 +15,10 @@ function parseCSV(content: string | Buffer) {
 - @types를 사용하지 않는 자바스크립트 사용자
 - nodejs를 사용하지 않는 타입스크립트 사용자
 
-각자가 필요한 모듈만 사용할 수 있는 방법은 없을까?
+각자가 필요한 모듈만 사용할 수 있도록 하자.
 
 ```typescript
-// good - 구조적 타이핑
+// good - "Buffer" 대신 선언한 타입, 별도로 선언하여 구조적 타이핑 적용
 interface CsvBuffer {
   toString: (encoding: string) => string;
 }
@@ -26,6 +26,4 @@ interface CsvBuffer {
 function parseCSV(content: string | CsvBuffer) {
   ...
 }
-
-// good - 미러링
 ```
